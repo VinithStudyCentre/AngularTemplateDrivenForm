@@ -1,0 +1,216 @@
+<div class="container" style="background-color: #e5eacd;height: 1000px;">
+
+    <form style="padding-top: 10px;" #formCan="ngForm" ngNativeValidate>
+        <div class="form-group">
+
+
+            <!-- This is code for candidate name -->
+
+            <div class="row" style="margin-top: 78px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="candidateName" style="text-align: center;
+                        padding-left: 130px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">Candidate Name</label>
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="candidateName"
+                        name="candidateName" aria-describedby="emailHelp"
+                        placeholder="Enter Name ..."
+                        [(ngModel)]="UserInfo.candidateName" required
+                        #CN="ngModel">
+
+                        
+                        <label for="" [hidden]="CN.untouched || CN.valid" style="color: red;padding-top: 7px;">Please Enter name.
+                    </label>
+                    <!-- <div [hidden]="CN.untouched || CN.valid" class="alert
+                        alert-danger">
+                        
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- This is code for email -->
+
+            <div class="row" style="margin-top: 47px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="candidateEmail" style="text-align: center;
+                        padding-left: 132px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">Candidate Email</label>
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6">
+                    <input type="email" class="form-control" id="candidateEmail"
+                        aria-describedby="emailHelp" placeholder="Enter email..." name="candidateEmail"
+                        [(ngModel)]="UserInfo.candidateEmail" #kk="ngModel" required>
+                        
+                        <label for="" [hidden]="kk.untouched || kk.valid" style="color: red;padding-top: 7px;">Please Enter Email.
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- This is code for Gender -->
+
+            <div class="row" style="margin-top: 47px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="candidateGender" style="text-align: center;
+                        padding-left: 197px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">Gender</label>
+
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6" style="margin-top: 8px;">
+                    <div class="form-check form-group">
+                        <div class="row">
+                            <div class="col-sm-2">
+
+                                <input class="form-check-input" type="radio"
+                                    name="Gender" id="MaleRadio" value="Male"
+                                    checked [(ngModel)]="UserInfo.Gender">
+                                <label class="form-check-label" for="MaleRadio"
+                                    style="margin-left: 5px;
+                                    margin-top: 2px;">
+                                    Male
+                                </label>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <input class="form-check-input" type="radio"
+                                    name="Gender" id="FemailRadio"
+                                    value="Female"
+                                    [(ngModel)]="UserInfo.Gender">
+                                <label class="form-check-label"
+                                    for="FemailRadio" style="margin-left: 5px;
+                                    margin-top: 2px;">
+                                    Female
+                                </label>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- This code for subcription -->
+
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="candidateEmail" style="text-align: center;
+                        padding-left: 117px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">Email Subscription</label>
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6" style="margin-top: 8px;">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input"
+                            id="emailSubscription" checked
+                            name="emailSubscription"
+                            [(ngModel)]="UserInfo.emailSubscription">
+                        <label class="custom-control-label"
+                            for="emailSubscription">Check this custom
+                            emailSubscription</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- This is code for Select city -->
+
+            <div class="row" style="margin-top: 47px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="City" style="text-align: center;
+                        padding-left: 220px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">City</label>
+
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6">
+                    <select class="custom-select" id="City" name="City"
+                        [(ngModel)]="UserInfo.City">
+                        <option value="0"> Select City</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Nashik">Nashik</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <!-- This is code for text Areas -->
+
+            <div class="row" style="margin-top: 47px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="Address" style="text-align: center;
+                        padding-left: 189px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">Address</label>
+
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <textarea class="form-control" id="Address" rows="4"
+                            name="Address" [(ngModel)]="UserInfo.Address" placeholder="Enter Address ..."></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- This is code for password -->
+
+            <div class="row" style="margin-top: 47px;">
+                <div class="col-3" style="margin-left: 37px;">
+                    <label for="Password" style="text-align: center;
+                        padding-left: 189px;
+                        padding-top: 8px;
+                        font-size: 16px;color: violet;">Password</label>
+
+                </div>
+                <div class="col-1" style="padding-top: 8px;">
+                    :
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <input type="password" class="form-control"
+                            id="Password" placeholder="Enter Password ..."
+                            name="Password" [(ngModel)]="UserInfo.Password">
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+        </div>
+
+        <!-- This code is used to check values of data model -->
+        {{UserInfo|json}}
+
+    </form>
+
+
+
+</div>
